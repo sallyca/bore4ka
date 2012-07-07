@@ -1,0 +1,13 @@
+- @products.each do |product|
+  .item
+    .photo.column
+      = image_fu(product.image)
+    .quote-text.column
+      = product.description
+    .actions.column
+      = link_to "Купить", "#"
+      = link_to "Поделиться", "#"
+  .clearfix      
+  %br
+  %br
+  %br

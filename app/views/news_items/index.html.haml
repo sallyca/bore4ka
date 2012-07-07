@@ -1,0 +1,13 @@
+- @news_items.each do |news_item|
+  .item
+    .photo.column
+      = link_to image_tag("stub-small.png"), "#"
+    .content.column
+      = news_item.content
+    .actions.column
+      = link_to "Поделиться", "#"
+      = link_to "Пожаловаться", "#"
+  .clearfix      
+  %br
+  %br
+  %br

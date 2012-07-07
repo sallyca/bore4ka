@@ -1,0 +1,17 @@
+#main-menu
+  #top-nav
+    .main-item
+      #logo
+        %span.bold= "«Альянс "
+        %span="Текстиль»"
+    .search
+      = form_tag quotes_path, :method => 'get' do
+        = "Искать"
+        = text_field_tag :search, params[:search], :size=> 100
+        = submit_tag "Найти", :name => nil
+#bottom-nav
+  .clearfix
+  .item=link_to_unless_current "Продукция", products_path
+  .item=link_to_unless_current "Клиенты", "#"
+  .item=link_to_unless_current "Новости", news_items_path
+  .item=link_to_unless_current "Контакты", tags_path

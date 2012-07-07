@@ -1,0 +1,17 @@
+- @quotes.each do |quote|
+  .item
+    .photo.column
+      = link_to image_tag("stub-small.png"), "#"
+    .quote-text.column
+      = quote.text
+    .actions.column
+      = link_to "Сохранить себе", "#"
+      = link_to "Поделиться", "#"
+      = link_to "Пожаловаться", "#"
+    .signature
+      - quote.tags.each do |tag|
+        = link_to tag.keyword, tag
+  .clearfix      
+  %br
+  %br
+  %br

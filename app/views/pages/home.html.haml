@@ -1,0 +1,35 @@
+.board
+  .tagline
+    = "Мы занимаемся производством и поставкой текстильных изделий для гостиниц, спа-комплексов и салонов красоты. Предоставляем полный комплекс услуг по комплектации Вашего заведения качественными тапочками, халатами, полотенцами, предметами личной гигиены, рекламно сувенирной продукции."
+  .links
+    .item
+      .photo
+        = link_to image_tag("stub-small.png"), "#"
+      .title= link_to "Для гостиниц"
+      = "тапочки, махровые изделия, мини-парфюмерия..."
+    .item
+      .photo
+        = link_to image_tag("stub-small.png"), "#"
+      .title= link_to "Для салонов и студий"
+      = "наборы и аксессуары."
+    .item
+      .photo
+        = link_to image_tag("stub-small.png"), "#"
+      .title= link_to "Частным клиентам"
+      = "изделия под заказ."
+  .clearfix
+  .login-form
+    = render "shared/devise"
+
+%h3.title
+  = "Мини-парфюмерия"
+- Quote.from_movies.each do |quote|
+  = render "/pages/quotes/section", :quote => quote
+.clearfix
+    
+%h3.title
+  = "Тапочки"
+- Quote.from_books.each do |quote|
+  = render "/pages/quotes/section", :quote => quote
+.clearfix
+
