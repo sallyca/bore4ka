@@ -10,4 +10,8 @@
       %li= image_fu(f.object.image)
     = f_i.input :image, :as => :file
 
+  .field
+    = f.label :category, "Категории"
+    = f.collection_select :category_id, Category.order(:title), :id, :title, {}
+
   = f.buttons
