@@ -2,7 +2,8 @@
   #top-nav
     .main-item
       #logo
-        %span.bold= "«Альянс "
+        %span.bold
+          =link_to "«Альянс ", "/"
         %span="Текстиль»"
     .search
       = form_tag quotes_path, :method => 'get' do

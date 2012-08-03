@@ -1,4 +1,6 @@
 Bore4ka::Application.routes.draw do
+  resources :types
+
   resources :news_items
 
   resources :products

@@ -14,4 +14,8 @@
     = f.label :category, "Категории"
     = f.collection_select :category_id, Category.order(:title), :id, :title, {}
 
+  .field
+    = f.label :category, "Тип"
+    = f.collection_select :type_id, Type.order(:title), :id, :title, {}
+
   = f.buttons
